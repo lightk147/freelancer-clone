@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/024c59afef.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=psychology" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box;? */
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+
+        .container {
+            max-width: 2000px;
+            height: fit-content;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            position: relative;
+        }
+
+        .top-nav {
+            width: 100%;
+            height: 84px;
+            background-color: black;
+            margin: 0 0 0 0;
+            display: flex;
+            color: white;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin: 0 0 0 0;
+            align-items: center;
+            /* cursor: pointer; */
+        }
+
+        .top-nav .fa-solid {
+            color: white;
+        }
+
+        .logo img {
+            width: 150px;
+            height: 50px;
+        }
+
+        .logo {
+            margin-right: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            flex: 0 0 145px;
+        }
+
+        .hire {
+            width: 160.66px;
+            height: 100%;
+            align-items: center;
+            display: flex;
+        }
+
+        .skill {
+            width: 402.98px;
+            height: 501px;
+            background-color: #12151B;
+            position: absolute;
+            top: 100px;
+            left: 200px;
+            padding: 32px 16px 24px 32px;
+            /* width: auto; */
+        }
+
+        .skill div {
+            width: 355px;
+            height: 100px;
+
+        }
+
+        .byskill {
+            width: 355px;
+            height: 97.02px;
+            align-items: flex-start;
+            background-color: red;
+            border-radius: 5px;
+            display: flex;
+            padding: 16px 12px;
+            position: relative;
+            /* transition: background-color .3s ease-in-out; */
+            z-index: 1;
+        }
+
+        .skillicon {
+            width: 32px;
+            height: 36px;
+            font-weight: 400;
+            color: #589af0;
+        }
+
+        .skillnote {
+            width: 268.99px;
+            height: 65.03px;
+            background-color: green;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .skillup{
+            width: 242.99px;
+            height: 21px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white
+        }
+
+        .man {
+            width: 117.19px;
+            height: 100%;
+            align-items: center;
+            display: flex;
+
+        }
+
+        .solutions {
+            width: 114px;
+            height: 100%;
+            align-items: center;
+            display: flex;
+
+        }
+
+        .options-div {
+            /* background-color: pink; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* width: 250px; */
+            height: 40px;
+            /* cursor: pointer; */
+        }
+
+        .options-div div {
+            /* padding: 20px; */
+            justify-content: space-evenly;
+            cursor: pointer;
+            background-color: red;
+        }
+
+        .options-div2 div {
+            width: 67px;
+            height: 23px;
+            border: none;
+            background-color: none;
+            /* width: ; */
+        }
+
+        .options-div2 {
+            display: flex;
+            /* background-color: black; */
+            color: white;
+            height: 40px;
+            /* width: 100px; */
+            align-items: center;
+            justify-content: space-between;
+            /* width: 140px; */
+        }
+
+        .post {
+            /* background-color: red; */
+            border-radius: 10px;
+            display: flex;
+            background-color: #E60278;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 40px;
+        }
+
+        .user {
+            display: flex;
+            /* background-color: rebeccapurple; */
+            width: 200px;
+            align-items: center;
+        }
+
+        .user img {
+            height: 50px;
+            width: 50px;
+            /* background-color: blue; */
+        }
+
+        .btn-secondary {
+            display: flex;
+        }
+
+        .btn-secondary img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .ml {
+            /* background-color: chartreuse; */
+            height: 50px;
+            font-size: larger;
+
+        }
+
+        .right {
+            margin-left: auto;
+            /* background-color: aqua; */
+            width: 500px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <div class="logo">
+                <img src="https://www.f-cdn.com/assets/main/en/assets/freelancer-logo-light.svg" alt="">
+
+            </div>
+            <div class="hire"> <a href="">Hire freelancer <i class="fa-solid fa-chevron-down"></i></a></i></div>
+            <div class="skill">
+                <div>
+                    <div class="byskill">
+                        <div class="skillicon"><span class="material-symbols-outlined">psychology</span></div>
+                        <div class="skillnote">
+                            <div>
+                                <div class="skillup"><strong>By skill</strong></div>
+                                <div>Looking for freelancer with a specific skill? Start here.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="man"><a href=""> Find Work <i class="fa-solid fa-chevron-down"></i></a> </div>
+            <div class="groups"><a href=""> Solutions <i class="fa-solid fa-chevron-down"></i></a></div>
+            <!-- <div class="options-div"> </div> -->
+            <div class="right">
+                <div class="options-div2">
+                    <div> Log In </div>
+                    <div> Sign Up </div>
+                </div>
+                <div class="post">Post a Project</div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

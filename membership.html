@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/024c59afef.js" crossorigin="anonymous"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap 5 JS with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Membership</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box;? */
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+
+        .container {
+            max-width: 2000px;
+            height: fit-content;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            position: relative;
+        }
+
+        .top-nav {
+            width: 100%;
+            height: 54px;
+            background-color: black;
+            margin: 0 0 0 0;
+            display: flex;
+            color: white;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin: 0 0 0 0;
+            /* align-items: center; */
+        }
+
+        .top-nav .fa-solid {
+            color: white;
+        }
+
+        .logo img {
+            width: 150px;
+            height: 50px;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        .options-div {
+            /* background-color: pink; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* width: 250px; */
+            height: 40px;
+        }
+
+        .options-div div {
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        /* .options-div2 div{
+            border: none;
+            background-color: none;
+            width: ;
+        } */
+        .options-div2 {
+            display: flex;
+            /* background-color: black; */
+            color: white;
+            height: 40px;
+            width: 100px;
+            align-items: center;
+            justify-content: space-between;
+            /* width: 140px; */
+        }
+
+
+        .post {
+            /* background-color: red; */
+            border-radius: 10px;
+            display: flex;
+            /* background-color: black; */
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 40px;
+        }
+
+        .user {
+            display: flex;
+            /* background-color: rebeccapurple; */
+            width: 200px;
+            align-items: center;
+        }
+
+        .user img {
+            height: 50px;
+            width: 50px;
+            /* background-color: blue; */
+        }
+
+        .btn-secondary {
+            display: flex;
+        }
+
+        .btn-secondary img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .ml {
+            /* background-color: chartreuse; */
+            height: 50px;
+            font-size: larger;
+
+        }
+
+        .right {
+            margin-left: auto;
+            /* background-color: aqua; */
+            width: 500px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .max {
+            background-color: #001431;
+            /* width: 1409px; */
+            height: 240px;
+            width: 100%;
+            font-size: 30px;
+            align-content: center;
+            padding-left: 100px;
+            color: white;
+            margin: 0 0 0 0;
+        }
+
+        .max div {
+            padding-bottom: 20px;
+            /* font-size: large; */
+        }
+
+        .billing-type {
+            width: 100%;
+            height: 69px;
+            display: flex;
+            justify-content: flex-end;
+            margin-left: -125px;
+        }
+
+        .bill {
+            /* background-color: red; */
+            width: 400px;
+            display: flex;
+            padding-top: 45px;
+            /* padding-left: -30px; */
+            justify-content: space-evenly;
+            /* margin-left: auto; */
+
+        }
+
+        /* 
+        .bill div {
+            padding-left: 50px;
+            padding-right: 50px;
+
+
+        } */
+
+        .plans {
+            /* background-color: aquamarine; */
+            width: 1409px;
+            height: 1221px;
+            margin: auto;
+        }
+
+        .plans div {
+            display: flex;
+        }
+
+        .first-plan {
+            /* background-color: cyan; */
+            /* border: 1px solid #BCC5D3; */
+            width: 328px;
+            height: 1010px;
+            padding-top: 48px;
+            /* flex: 1 1 0; */
+            flex-direction: column;
+            /* border: 2px solid black; */
+        }
+
+        .first-plan img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .first-plan .one {
+            /* background-color: burlywood; */
+            width: 326px;
+            height: 91px;
+            flex-direction: column;
+            align-items: center;
+            font-size: large;
+            margin-block-end: 16px;
+        }
+
+        .fp-first {
+            width: 326px;
+            height: 294px;
+            align-items: center;
+            /* background-color: cadetblue; */
+            flex-direction: column;
+        }
+
+        .fp-snd {
+            /* background-color: blanchedalmond; */
+            width: 326px;
+            height: 666px;
+            font-size: 15px;
+            flex-direction: column;
+        }
+
+        .fp-snd div {
+            /* flex-direction: column; */
+            padding-top: 20px;
+
+        }
+
+        #four {
+            /* background-color: red; */
+            padding-top: 10px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .five {
+            padding: 0 24px;
+        }
+
+        #five button {
+            width: 278px;
+            height: 45px;
+            border: none;
+            background-color: blue;
+            font-weight: bold;
+            font-size: larger;
+            color: white;
+        }
+
+        .month {
+            position: relative;
+            top: 15px;
+        }
+
+        .snd-plan {
+            /* background-color: brown; */
+            /* border: 1px solid #BCC5D3; */
+            width: 328px;
+            /* flex: 1 1 0; */
+            height: 1010px;
+            padding-top: 48px;
+            flex-direction: column;
+        }
+
+        .snd-plan img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .snd-plan .one {
+            /* background-color: burlywood; */
+            width: 326px;
+            height: 91px;
+            flex-direction: column;
+            align-items: center;
+            font-size: large;
+            margin-block-end: 16px;
+        }
+
+        /* .fp-first{
+            width: 326px;
+            height: 294px;
+            align-items: center;
+            background-color:cadetblue;
+            flex-direction: column;
+        } */
+        .thd-plan {
+            /* background-color: red; */
+            /* border: 1px solid #BCC5D3; */
+            width: 328px;
+            height: 1221px;
+            /* flex: 1 1 0; */
+            padding-top: 48px;
+            flex-direction: column;
+        }
+
+        .thd-plan img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .thd-plan .one {
+            /* background-color: burlywood; */
+            width: 326px;
+            height: 91px;
+            flex-direction: column;
+            align-items: center;
+            font-size: large;
+            margin-block-end: 16px;
+        }
+
+        .four-plan {
+            /* background-color: green; */
+            /* border: 1px solid #BCC5D3; */
+            width: 328px;
+            height: 1221px;
+            /* flex: 1 1 0; */
+            padding-top: 48px;
+            flex-direction: column;
+        }
+
+        .four-plan img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .four-plan .one {
+            /* background-color: burlywood; */
+            width: 326px;
+            height: 91px;
+            flex-direction: column;
+            align-items: center;
+            font-size: large;
+            margin-block-end: 16px;
+        }
+
+        /* The switch container */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+            padding-left: -30px;
+        }
+
+        /* Hide the checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider (toggle button appearance) */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        /* The circle inside the slider */
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        /* When the checkbox is checked */
+        input:checked+.slider {
+            background-color: #1772EB;
+        }
+
+        /* Move the circle to the right when checked */
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        .fa-solid {
+            color: #1772EB;
+        }
+
+        .part {
+            width: 1385px;
+            height: 43px;
+            margin-left: 100px;
+            font-size: 15px;
+        }
+
+        .domore {
+            /* width:  1847px; */
+            /* width: 100%; */
+            /* height: 855px;
+            position: relative; */
+            /* left: -300px; */
+            background-image: url(https://www.f-cdn.com/assets/main/en/assets/membership/main/benefits-section-bg.jpg);
+            /* align-content: center; */
+            /* margin: auto; */
+            display: flex;
+            /* padding-left: 100px */
+            margin-block-end: 72px;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .more {
+            /* background-color: #1772EB; */
+            width: 4547px;
+            height: 663px;
+            /* background-color: red; */
+            margin-bottom: 96px;
+            padding-top: 96px;
+            margin-left: 100px;
+            padding-right: 64px;
+        }
+
+        .more .dm {
+            width: 1281px;
+            height: 79px;
+            margin-left: -12px;
+            margin-right: -12px;
+            font-size: 41px;
+        }
+
+        .place {
+            width: 1281;
+            height: 583;
+        }
+
+        .place div {
+            width: 1305px;
+            height: 305px;
+            display: flex;
+        }
+
+        .place div div {
+            /* background-color: #1772EB; */
+            width: 320px;
+            height: 213px;
+            margin-left: -12px;
+            /* margin-right: -12px; */
+            display: block;
+            padding: 0 12px;
+
+        }
+
+        /* .place div div img{
+            width: 62px;
+            height: 19px;
+        } */
+        .aaaa div {
+            padding-top: -10px;
+        }
+
+        .aaaa {
+            /* background-color: gray; */
+            display: block;
+        }
+
+        .places {
+            width: 1281;
+            height: 583;
+            position: relative;
+            top: -390px;
+        }
+
+        .places div {
+            width: 1305px;
+            height: 305px;
+            display: flex;
+        }
+
+        .places div div {
+            /* background-color: #1772EB; */
+            width: 320px;
+            height: 213px;
+            margin-left: -12px;
+            /* margin-right: -12px; */
+            display: block;
+            padding: 0 12px;
+
+        }
+
+        .accordion {
+            width: 550px;
+            height: 394px;
+            margin: auto;
+        }
+
+        .acc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .need {
+            display: flex;
+            margin: auto;
+            position: relative;
+            top: -100px;
+        }
+
+        .need button {
+            width: 197px;
+            height: 45px;
+            background-color: white;
+            font-size: 20px;
+            line-height: 1.4;
+            /* padding: 8px 22px; */
+        }
+
+        /* footer {
+            background-color: black;
+            /* width: 1409px; */
+        /* width: 100%; */
+        /* height: 633px; */
+        /* margin: auto; */
+        /* position: relative; */
+        /* bottom: -2700px; */
+        /* color: white; */
+        /* word-spacing: 2px; */
+        /* font-size: 15px; */
+        /* cursor: pointer; */
+        /* } */
+        footer {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            color: white;
+        }
+
+        .ft {
+            /* background-color: gray; */
+            width: 1409px;
+            height: 422px;
+            margin: 32px 0;
+            display: flex;
+            margin: auto;
+            margin-top: 20px;
+            /* cursor: pointer; */
+        }
+
+        .ft .first {
+            /* background-color: green; */
+            /* color: white; */
+            width: 234px;
+            height: 183px;
+            font-size: 15px;
+        }
+
+        #first {
+            display: flex;
+            padding-top: 10px;
+            /* cursor: pointer; */
+        }
+
+        #first h3 {
+            padding-left: 10px;
+        }
+
+        #first img {
+            width: 133px;
+            height: 31px;
+        }
+
+        .second {
+            width: 234px;
+            height: 422px;
+            padding-left: 10px;
+            padding-right: 6px;
+            /* background-color: green; */
+            /* cursor: pointer; */
+        }
+
+        .sec-top {
+            font-weight: bold;
+        }
+
+        .sec-bottom {
+            padding-top: 10px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .third {
+            width: 234px;
+            height: 322px;
+        }
+
+        .fourth {
+            width: 234px;
+            height: 172px;
+        }
+
+        .fifth {
+            width: 234px;
+            height: 122px;
+        }
+
+        .sec-las {
+            width: 160px;
+            height: 24px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+
+        .sixth .sec-bottom div {
+            padding-top: 15px;
+        }
+
+        .st {
+            font-size: small;
+            width: 1409px;
+            height: 146px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            /* justify-items: center; */
+        }
+
+        .dropdown-toggle {
+            background-color: transparent !important;
+            /* Remove background */
+            border: none;
+            /* Remove border */
+            color: white;
+            /* Set text color */
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+            /* Hide the arrow */
+        }
+
+        /* Optional: Change hover effect on the button */
+        .dropdown-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            /* Optional hover effect */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <div class="logo">
+                <img src="https://www.f-cdn.com/assets/main/en/assets/freelancer-logo-light.svg" alt="">
+            </div>
+            <div class="options-div">
+                <div> <i class="fa-brands fa-safari"></i>Browse</div>
+                <div> <i class="fa-solid fa-briefcase"></i>Manage</div>
+                <div> <i class="fa-solid fa-user-group"></i>Groups</div>
+            </div>
+            <div class="right">
+                <div class="options-div2">
+                    <div><i class="fa-regular fa-bell"></i></div>
+                    <div><i class="fa-solid fa-folder-open"></i></div>
+                    <div><i class="fa-solid fa-message"></i></div>
+                    <!-- <i class="fa-solid fa-message">< -->
+                </div>
+                <div class="post">Post a Project</div>
+                <!-- <div class="user">
+                    <img src="asd.jpg" alt="">
+                    <div class="ml">
+                        <div><strong>@username</strong></div>
+                        <div>$0.00</div>
+                    </div>
+                </div> -->
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="asd.jpg" alt="">
+                        <div class="ml">
+                            <div><strong>@username</strong></div>
+                            <div>$0.00</div>
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Account</a></li>
+                        <li><a class="dropdown-item" href="C:\Users\USER\OneDrive\Desktop\freelancer\prof.html">View profile</a></li>
+                        <li><a class="dropdown-item" href="#">Membership</a></li>
+                        <li><a class="dropdown-item" href="#">Account analytics</a></li>
+                        <li><a class="dropdown-item" href="#">Bid Insights</a></li>
+                        <li><a class="dropdown-item" href="C:\Users\USER\OneDrive\Desktop\freelancer\settings.html">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Theme: Light </a></li>
+                        <li><a class="dropdown-item" href="#">Finances</a></li>
+                        <li><a class="dropdown-item" href="#">Balance</a></li>
+                        <li><a class="dropdown-item" href="#">$0.00 USD</a></li>
+                        <li><a class="dropdown-item" href="#">Add funds</a></li>
+                        <li><a class="dropdown-item" href="#">Withdraw funds </a></li>
+                        <li><a class="dropdown-item" href="#">Transaction history</a></li>
+                        <li><a class="dropdown-item" href="#">Financial dashboard </a></li>
+                        <li><a class="dropdown-item" href="#">Payment sharing</a></li>
+                        <li><a class="dropdown-item" href="#">Support </a></li>
+                        <li><a class="dropdown-item" href="#">Logout </a></li>
+                        <li><a class="dropdown-item" href="#">App: 2bcd802 (1729749757 / 2024-10-24) </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="max">
+            <div>
+                <h1>Maximize your success and earnings</h1>
+            </div>
+            <div>Try a Freelancer Membership to enjoy greater benefits.</div>
+        </div>
+        <div class="billing-type">
+            <div class="bill">
+                <div>Billing Type:</div>
+                <div><strong>Monthly</strong></div>
+                <div><label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label></div>
+                <div><strong>Annual</strong></div>
+            </div>
+        </div>
+        <div class="plans">
+            <div>
+                <div class="first-plan">
+                    <div class="fp-first">
+                        <div class="one"><img
+                                src="https://www.f-cdn.com/assets/main/en/assets/badges/membership/annual-level-two.svg"
+                                alt="">
+                            <div>
+                                <h3>Basic</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div>$</div>
+                                <div>
+                                    <h1>4.50</h1>
+                                </div>
+                            </div>
+                            <div class="month">/month</div>
+                        </div>
+                        <div>$54.00 billed annually</div>
+                        <div id="four">
+                            <div>You save $5.88</div>
+                        </div>
+                        <div id="five"><button>Upgrade</button></div>
+                    </div>
+                    <div class="fp-snd">
+
+                        <div><i class="fa-solid fa-circle-check"></i>50 Bids per month</div>
+                        <div><i class="fa-solid fa-circle-check"></i>50 Skills </div>
+                        <div><i class="fa-solid fa-circle-check"></i>Unlock rewards</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Unlimited project bookmarks</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Preferred Freelancer eligible*</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Custom cover photo</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>3 Free highlighted contest entries / month</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>12 Free sealed contest entries / month</div>
+                        <div><i class="fa-solid fa-circle-check"></i>5 Employer followings</div>
+
+                    </div>
+                </div>
+                <div class="snd-plan">
+                    <div class="fp-first">
+                        <div class="one"><img
+                                src="https://www.f-cdn.com/assets/main/en/assets/badges/membership/annual-level-two.svg"
+                                alt="">
+                            <div>
+                                <h3>Plus</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div>$</div>
+                                <div>
+                                    <h1>8.90</h1>
+                                </div>
+                            </div>
+                            <div class="month">/month</div>
+                        </div>
+                        <div>$54.00 billed annually</div>
+                        <div id="four">
+                            <div>Try one month FREE</div>
+                        </div>
+                        <div id="five"><button>Start Free Trial</button></div>
+                    </div>
+                    <div class="fp-snd">
+
+                        <div><i class="fa-solid fa-circle-check"></i>50 Bids per month</div>
+                        <div><i class="fa-solid fa-circle-check"></i>50 Skills </div>
+                        <div><i class="fa-solid fa-circle-check"></i>Unlock rewards</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Unlimited project bookmarks</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Preferred Freelancer eligible*</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>Custom cover photo</div>
+                        <div><i class="fa-solid fa-circle-check"></i> 3 Free highlighted contest entries / month</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>12 Free sealed contest entries / month</div>
+                        <div><i class="fa-solid fa-circle-check"></i>5 Employer followings</div>
+
+                    </div>
+                </div>
+                <div class="thd-plan">
+                    <div class="fp-first">
+                        <div class="one"><img
+                                src="https://www.f-cdn.com/assets/main/en/assets/badges/membership/annual-level-four.svg"
+                                alt="">
+                            <div>
+                                <h3>Professional</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div>$</div>
+                                <div>
+                                    <h1>39.90</h1>
+                                </div>
+                            </div>
+                            <div class="month">/month</div>
+                        </div>
+                        <div>$478.80 billed annually</div>
+                        <div id="four">
+                            <div>You have $109.20</div>
+                        </div>
+                        <div id="five"><button>Upgrade</button></div>
+                    </div>
+                    <div class="fp-snd">
+
+                        <div><i class="fa-solid fa-circle-check"></i>300 Bids per month</div>
+                        <div><i class="fa-solid fa-circle-check"></i>100 Skills</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Client Engagement</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Bid Insights</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Daily withdrawal requests</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Unlock rewards</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Unlimited project bookmarks</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>Preferred Freelancer eligible</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>Custom cover photo</div>
+                        <div><i class="fa-solid fa-circle-check"></i> 15 Free highlighted contest entries / month</div>
+                        <div><i class="fa-solid fa-circle-check"></i> 75 Free sealed contest entries / month</div>
+                        <div><i class="fa-solid fa-circle-check"></i> 20 Employer followings</div>
+                        <div><i class="fa-solid fa-circle-check"></i> 15 External invoices</div>
+                        <div> <i class="fa-solid fa-circle-check"></i> Project extensions</div>
+                        <div> <i class="fa-solid fa-circle-check"></i> Sealed projects</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Premium Freelancer Insights </div>
+                        <div> <i class="fa-solid fa-circle-check"></i> High value project bidding</div>
+
+                    </div>
+                </div>
+                <div class="four-plan">
+                    <div class="fp-first">
+                        <div class="one"><img
+                                src="https://www.f-cdn.com/assets/main/en/assets/badges/membership/annual-level-five.svg"
+                                alt="">
+                            <div>
+                                <h3>Premier</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div>$</div>
+                                <div>
+                                    <h1>79.90</h1>
+                                </div>
+                            </div>
+                            <div class="month">/month</div>
+                        </div>
+                        <div>$958.80 billed annually</div>
+                        <div id="four">
+                            <div>You have $229.20</div>
+                        </div>
+                        <div id="five"><button>Upgrade</button></div>
+                    </div>
+                    <div class="fp-snd">
+
+                        <div><i class="fa-solid fa-circle-check"></i>1500 Bids per month</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>400 Skills</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Client Engagement</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Bid Insights</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>Daily withdrawal requests</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>Unlock rewards</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>Unlimited project bookmarks</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Preferred Freelancer eligible</div>
+                        <div> <i class="fa-solid fa-circle-check"></i> Custom cover photo</div>
+                        <div> <i class="fa-solid fa-circle-check"></i> 30 Free highlighted contest entries / month</div>
+                        <div> <i class="fa-solid fa-circle-check"></i>150 Free sealed contest entries / month</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Unlimited Employer followings</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Unlimited External invoices</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Project extensions</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Sealed projects</div>
+                        <div> <i class="fa-solid fa-circle-check"></i> Premium Freelancer Insights</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Free NDA projects</div>
+                        <div><i class="fa-solid fa-circle-check"></i>High value project bidding*</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part">
+            <div>Prices displayed are in USD. Change plans anytime, conditions apply see FAQ.</div>
+            <div>Benefits require Membership plan and additional criteria for eligibility.</div>
+        </div>
+        <div class="domore">
+            <div class="more">
+                <div>
+                    <div class="dm">
+                        <h2>Do More. Earn More.</h2>
+                    </div>
+                    <div class="place">
+                        <div>
+                            <div class="aaaa">
+                                <div><img src="https://www.f-cdn.com/assets/main/en/assets/membership/main/bids-v1.svg"
+                                        alt="">
+                                    <h3>Place more bids</h3>
+                                    <h4>Reach more clients and increase your chances of winning projects with 300
+                                        additional bids per month.</h4>
+                                </div>
+
+                            </div>
+                            <div class="aaaa">
+                                <div><img
+                                        src="https://www.f-cdn.com/assets/main/en/assets/membership/main/skills-v1.svg"
+                                        alt="">
+                                    <h3>Expand your skills</h3>
+                                    <h4>Cast your net on a wider range of projects that match your skills and
+                                        profession.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div class="places">
+                        <div>
+                            <div class="aaaa">
+                                <div><img
+                                        src="https://www.f-cdn.com/assets/main/en/assets/membership/main/high-value-bidding-v1.svg"
+                                        alt="">
+                                    <h3>Get notified on select projects</h3>
+                                    <h4>Bookmark projects and follow employers to get notified faster about projects you
+                                        care about.</h4>
+                                </div>
+
+                            </div>
+                            <div class="aaaa">
+                                <div><img
+                                        src="https://www.f-cdn.com/assets/main/en/assets/membership/main/custom-cover-photo-v1.svg"
+                                        alt="">
+                                    <h3>Competitive advantage</h3>
+                                    <h4>Access to exclusive features like custom cover photo, bid insights, client
+                                        engagement insights and more!</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="acc">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div>
+                    <h1><strong>Frequently Asked Questions</strong></h1>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Why should I upgrade?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">You get more earning opportunities and better savings as a Basic,
+                            Plus, Professional or Premier member. Bid on more projects, add more skills,
+                            save on project listing upgrades and unlock special rewards!</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Can I change plans?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Of course! Upgrade your membership plan at anytime to get additional
+                            benefits immediately. Alternatively, you can downgrade your membership and continue to
+                            receive the
+                            benefits of your current membership until it expires, before switching to the lower
+                            membership tier</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            What is the Preferred Freelancer Program?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Get Exclusive Access to the Best Projects with the Preferred
+                            Freelancer Program. <a href="">Read more</a></div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Can I cancel my membership?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Yes, you can cancel your membership at anytime with no additional
+                            charges.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="need"><button><strong>Need more help?</strong></button></div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <div class="ft">
+                <div class="first">
+                    <div id="first"><img src="https://www.f-cdn.com/assets/main/en/assets/freelancer-logo-light.svg"
+                            alt=""></div>
+                    <div id="first">
+                        <div><i class="fa-solid fa-globe"></i></div><a href="">US (International)/ English</a>
+                    </div>
+                    <div id="first">
+                        <div><i class="fa-solid fa-circle-question"></i></div><a href="">Help & Support</a>
+                    </div>
+                    <div id="first">
+                        <div><i class="fa-solid fa-person"></i></div><a href="">Accessiblity</a>
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="sec-top">
+                        <h3><a href="">Freelancer</a></h3>
+                    </div>
+                    <div class="sec-bottom">
+                        <div><a href="">Categories</a></div>
+                        <div><a href="">Projects</a></div>
+                        <div><a href="">Contests</a></div>
+                        <div><a href="">Freelancers</a></div>
+                        <div><a href="">Enterprise</a></div>
+                        <div><a href="">AI Development</a></div>
+                        <div><a href="">Membership</a></div>
+                        <div><a href="">Preferred Freelancer Program</a></div>
+                        <div><a href="">Project Management</a></div>
+                        <div><a href="">Local Jobs</a></div>
+                        <div><a href="">Photo Anywhere</a></div>
+                        <div><a href="">Showcase</a></div>
+                        <div><a href="">API for Developers</a></div>
+                        <div><a href="">Get Verified</a></div>
+                        <div><a href="">Desktop App</a></div>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="sec-top">
+                        <h3><a href="">About</a></h3>
+                    </div>
+                    <div class="sec-bottom">
+                        <div><a href="">About Us</a></div>
+                        <div><a href="">How it works</a></div>
+                        <div><a href="">Security</a></div>
+                        <div><a href="">Investor</a></div>
+                        <div><a href="">Sitemap</a></div>
+                        <div><a href="">Stories</a></div>
+                        <div><a href="">News</a></div>
+                        <div><a href="">Team</a></div>
+                        <div><a href="">Awards</a></div>
+                    </div>
+                </div>
+                <div class="fourth">
+                    <div class="sec-top">
+                        <h3><a href="">Terms</a></h3>
+                    </div>
+                    <div class="sec-bottom">
+                        <div><a href="">Privacy Policy</a></div>
+                        <div><a href="">Terms and Conditions</a></div>
+                        <div><a href=""> Copyright Policy</a></div>
+                        <div><a href=""> Code of Conduct</a></div>
+                        <div><a href=""> Fees and Charges</a></div>
+                    </div>
+                </div>
+                <div class="fifth">
+                    <div class="sec-top">
+                        <h3><a href="">Partners</a></h3>
+                    </div>
+                    <div class="sec-bottom">
+                        <div><a href="">Escrow.com</a></div>
+                        <div><a href="">Loadshift</a></div>
+                        <div><a href=""> Warrior Forum</a></div>
+                    </div>
+                </div>
+                <div class="sixth">
+                    <div class="sec-top">
+                        <h3><a href="">Apps</a></h3>
+                    </div>
+                    <div class="sec-bottom">
+                        <div><img src="https://www.f-cdn.com/assets/main/en/assets/footer/app-store.svg" alt=""></div>
+                        <div><img src="https://www.f-cdn.com/assets/main/en/assets/footer/google-play.svg" alt=""></div>
+                    </div>
+                    <div class="sec-las">
+                        <div><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+                        <div><a href=""><i class="fa-brands fa-twitter"></i></a></div>
+                        <div><a href=""><i class="fa-brands fa-youtube"></i></a></div>
+                        <div><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="st">
+                <div>
+                    <div>
+                        <h3>76,846,198</h3>
+                    </div>
+                    <div>Registered Users</div>
+                </div>
+                <div>
+                    <div>
+                        <h3>24,186,323</h3>
+                    </div>
+                    <div>Total Jobs Posted</div>
+                </div>
+                <div>
+                    <div>Freelancer ® is a registered Trademark of Freelancer Technology Pty Limited (ACN 142 189 759)
+                    </div>
+                    <div>Copyright © 2024 Freelancer Technology Pty Limited (ACN 142 189 759)</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

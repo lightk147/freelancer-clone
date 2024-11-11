@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/024c59afef.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Settings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box;? */
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+
+        .container {
+            max-width: 2000px;
+            height: fit-content;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            position: relative;
+        }
+
+
+        .top-nav {
+            width: 100%;
+            height: 54px;
+            background-color: black;
+            margin: 0 0 0 0;
+            display: flex;
+            color: white;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin: 0 0 0 0;
+            /* align-items: center; */
+        }
+
+        .top-nav .fa-solid {
+            color: white;
+        }
+
+        .logo img {
+            width: 150px;
+            height: 50px;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        .options-div {
+            /* background-color: pink; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* width: 250px; */
+            height: 40px;
+        }
+
+        .options-div div {
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        /* .options-div2 div{
+            border: none;
+            background-color: none;
+            width: ;
+        } */
+        .options-div2 {
+            display: flex;
+            /* background-color: black; */
+            color: white;
+            height: 40px;
+            width: 100px;
+            align-items: center;
+            justify-content: space-between;
+            /* width: 140px; */
+        }
+
+
+        .post {
+            /* background-color: red; */
+            border-radius: 10px;
+            display: flex;
+            /* background-color: black; */
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 40px;
+        }
+
+        .user {
+            display: flex;
+            /* background-color: rebeccapurple; */
+            width: 200px;
+            align-items: center;
+        }
+
+        .user img {
+            height: 50px;
+            width: 50px;
+            /* background-color: blue; */
+        }
+
+        .btn-secondary {
+            display: flex;
+        }
+
+        .btn-secondary img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .ml {
+            /* background-color: chartreuse; */
+            height: 50px;
+            font-size: larger;
+
+        }
+
+        .right {
+            margin-left: auto;
+            /* background-color: aqua; */
+            width: 500px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .dropdown-toggle {
+            background-color: transparent !important;
+            /* Remove background */
+            border: none;
+            /* Remove border */
+            color: white;
+            /* Set text color */
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+            /* Hide the arrow */
+        }
+
+        /* Optional: Change hover effect on the button */
+        .dropdown-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            /* Optional hover effect */
+        }
+
+        .middle {
+            /* background-color: red; */
+            /* width: 1842.33px; */
+            height: 1543.19px;
+            /* background: var(--color-bg-mid); */
+            display: block;
+            min-height: 70vh;
+            /* padding-bottom: 16px; */
+            padding-top: 16px;
+        }
+
+        .inner {
+            /* background-color: black; */
+            margin: auto;
+            max-width: 1200px;
+            /* padding-left: calc(env(safe-area-inset-left) + 12px);
+            padding-right: calc(env(safe-area-inset-right) + 12px); */
+        }
+
+        .po {
+            /* background-color: green; */
+            width: 1176px;
+            height: 1463px;
+            margin: auto;
+        }
+
+        .me {
+            display: flex;
+        }
+
+        .ass {
+            /* background-color: bisque; */
+            width: 300px;
+            height: 432px;
+            padding: 0 12px;
+            flex-basis: 25%;
+            max-width: 25%;
+           
+        }
+
+        .as {
+            align-items: center;
+            display: flex;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .as div{
+            /* background-color: chartreuse; */
+            width: 191.17px;
+            height: 52.99px;
+        }
+        .as div a{
+            text-align: left;
+            padding-left: 24px;
+            padding-right: 24px;
+            margin-right: 0;
+            width: 100%;
+            padding: 16px;
+        }
+
+        .pass {
+            /* background-color: brown; */
+            width: 900px;
+            height: 1463px;
+            padding: 0 12px;
+            flex-basis: 75%;
+            max-width: 75%;
+        }
+        .prf{
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .prf div{
+            padding-bottom: 16px;
+            padding-top: 16px;
+        }
+        .prf h2{
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .one{
+            /* background-color: aqua; */
+            height: 176.63px;
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 24px;
+            padding-top: 24px;
+        }
+        .one .he{
+            width: 828px;
+            height: 28px;
+        }
+        .one h2{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .hes{
+            display: flex;
+            justify-content: space-between;
+        }
+        .hes input{
+            width: 402px;
+            height: 39px;
+        }
+        .hess{
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <div class="logo">
+                <img src="https://www.f-cdn.com/assets/main/en/assets/freelancer-logo-light.svg" alt="">
+            </div>
+            <div class="options-div">
+                <div> <i class="fa-brands fa-safari"></i>Browse</div>
+                <div> <i class="fa-solid fa-briefcase"></i>Manage</div>
+                <div> <i class="fa-solid fa-user-group"></i>Groups</div>
+            </div>
+            <div class="right">
+                <div class="options-div2">
+                    <div><i class="fa-regular fa-bell"></i></div>
+                    <div><i class="fa-solid fa-folder-open"></i></div>
+                    <div><i class="fa-solid fa-message"></i></div>
+                    <!-- <i class="fa-solid fa-message">< -->
+                </div>
+                <div class="post">Post a Project</div>
+                <!-- <div class="user">
+                    <img src="asd.jpg" alt="">
+                    <div class="ml">
+                        <div><strong>@username</strong></div>
+                        <div>$0.00</div>
+                    </div>
+                </div> -->
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="asd.jpg" alt="">
+                        <div class="ml">
+                            <div><strong>@username</strong></div>
+                            <div>$0.00</div>
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Account</a></li>
+                        <li><a class="dropdown-item" href="C:\Users\USER\OneDrive\Desktop\freelancer\prof.html">View
+                                profile</a></li>
+                        <li><a class="dropdown-item"
+                                href="C:\Users\USER\OneDrive\Desktop\freelancer\membership.html">Membership</a></li>
+                        <li><a class="dropdown-item" href="#">Account analytics</a></li>
+                        <li><a class="dropdown-item" href="#">Bid Insights</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Theme: Light </a></li>
+                        <li><a class="dropdown-item" href="#">Finances</a></li>
+                        <li><a class="dropdown-item" href="#">Balance</a></li>
+                        <li><a class="dropdown-item" href="#">$0.00 USD</a></li>
+                        <li><a class="dropdown-item" href="#">Add funds</a></li>
+                        <li><a class="dropdown-item" href="#">Withdraw funds </a></li>
+                        <li><a class="dropdown-item" href="#">Transaction history</a></li>
+                        <li><a class="dropdown-item" href="#">Financial dashboard </a></li>
+                        <li><a class="dropdown-item" href="#">Payment sharing</a></li>
+                        <li><a class="dropdown-item" href="#">Support </a></li>
+                        <li><a class="dropdown-item" href="#">Logout </a></li>
+                        <li><a class="dropdown-item" href="#">App: 2bcd802 (1729749757 / 2024-10-24) </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="middle">
+            <div class="inner">
+                <div class="po">
+                    <div class="me">
+                        <div class="ass">
+                            <div class="as">
+                                <div><a href="">Profile</a></div>
+                                <div><a href="">Email & Notifications</a></div>
+                                <div><a href="">Membership</a></div>
+                                <div><a href="">Password</a></div>
+                                <div><a href="">Payment & Finances</a></div>
+                                <div><a href="">Account Security</a></div>
+                                <div><a href="">Trust & Verifications</a></div>
+                                <div><a href="">Account</a></div>
+                            </div>
+                        </div>
+                        <div class="pass">
+                            <div>
+                                <div class="prf">
+                                    <div class="">
+                                        <div><h2>Profile Details</h2></div>
+                                    </div>
+                                </div>
+                                <div class="in">
+                                    <div>
+                                        <div class="one">
+                                            <div>
+                                                <div class="he"><h2>Name</h2></div>
+                                                <div class="hes">
+                                                    <div>
+                                                        <div class="hess">First Name</div>
+                                                        <div><input type="text"></div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="hess">Last Name</div>
+                                                        <div><input type="text"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
